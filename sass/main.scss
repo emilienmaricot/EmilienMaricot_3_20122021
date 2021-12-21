@@ -47,7 +47,7 @@ $txt-white: #fff;
     - placer ligne ombré
     - retravailler box-shadow button*/
 
-    .--btn-cta
+    .btn-cta
     {
         width: 200px;
         height: 45px;
@@ -90,14 +90,27 @@ $txt-white: #fff;
     /* SECTION FONCTIONNEMENT*/
 
     .fct{
-        width: 90%;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        &  __btn-fct{
-            display: flex;
-            flex-direction: row;
+        align-items: center;
+        & h2{
+            align-self: flex-start;
+            text-indent: 20px;
+        }
+    }
 
+    .btn-fct{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        width: 325px;
+        height: 80px;
+        border-radius: 25px;
+        margin-bottom: 5%;
+        & p{
+            font-weight: 700;
         }
     }
 }
