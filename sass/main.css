@@ -1,127 +1,318 @@
 @charset "UTF-8";
 /* REGLES GLOBAL*/
-@media all and (max-width: 768px) {
-  * {
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-  }
-  body {
-    width: 100%;
-    font-family: 'Roboto', sans-serif;
-  }
-  h1 {
-    font-family: 'Shrikhand';
-  }
-  h2 {
-    font-weight: 900;
-  }
-  p {
-    font-weight: 300;
-  }
-  header {
-    text-align: center;
-    padding: 3% 0% 2% 0%;
-  }
-  .btn {
-    font-weight: 700;
-    font-family: 'Roboto';
-    text-decoration: none;
-    border: none;
-  }
-  /* SECTION CALL TO ACTION
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  font-family: 'Shrikhand';
+}
+
+h2, h3 {
+  font-weight: 900;
+}
+
+p {
+  font-weight: 300;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+header {
+  text-align: center;
+  padding: 3% 0% 2% 0%;
+}
+
+li {
+  list-style-type: none;
+}
+
+.btn {
+  font-weight: 700;
+  font-family: 'Roboto';
+  text-decoration: none;
+  border: none;
+  -webkit-box-shadow: 3px 3px 8px #909090;
+          box-shadow: 3px 3px 8px #909090;
+}
+
+/* SECTION CALL TO ACTION
     - placer ligne ombré
-    - retravailler box-shadow button*/
-  .btn-cta {
-    width: 200px;
-    height: 45px;
-    margin-top: 3%;
-    border-radius: 50px;
-    -webkit-box-shadow: 2px 2px 4px grey;
-            box-shadow: 2px 2px 4px grey;
-    color: #fff;
-    background: -webkit-gradient(linear, right bottom, left top, from(#9356DC), to(#FF79DA));
-    background: linear-gradient(to top left, #9356DC, #FF79DA);
-  }
-  .cta {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    background-color: #f6f6f6;
-    text-align: center;
-    padding: 0% 0% 15% 0%;
-  }
-  .cta h2 {
-    width: 75%;
-    margin-bottom: -2%;
-  }
-  .cta p {
-    width: 90%;
-    font-size: 110%;
-  }
-  .cta__local {
-    width: 100%;
-    text-align: center;
-    background-color: #e7e7e7;
-    font-size: 120%;
-    font-weight: bold;
-    margin-bottom: 5%;
-  }
-  .cta__local i {
-    margin-right: 4%;
-    margin-top: -1%;
-  }
-  /* SECTION FONCTIONNEMENT*/
-  .fct {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .fct h2 {
-    -ms-flex-item-align: start;
-        align-self: flex-start;
-    text-indent: 20px;
-  }
-  .btn-fct {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    width: 325px;
-    height: 80px;
-    border-radius: 25px;
-    margin-bottom: 5%;
-  }
-  .btn-fct p {
-    font-weight: 700;
-  }
+    - retravailler mixin shadow-btn
+    - survol
+    */
+.btn-cta {
+  width: 200px;
+  height: 45px;
+  margin-top: 3%;
+  border-radius: 50px;
+  color: #fff;
+  background: -webkit-gradient(linear, right bottom, left top, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(to top left, #9356DC, #FF79DA);
+}
+
+.cta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f6f6f6;
+  text-align: center;
+  padding: 0% 0% 15% 0%;
+}
+
+.cta h2 {
+  width: 75%;
+  margin-bottom: -2%;
+}
+
+.cta p {
+  width: 90%;
+  font-size: 110%;
+}
+
+.cta__local {
+  width: 100%;
+  text-align: center;
+  background-color: #e7e7e7;
+  font-size: 120%;
+  font-weight: bold;
+  margin-bottom: 5%;
+}
+
+.cta__local i {
+  margin-right: 4%;
+  margin-top: -1%;
+}
+
+/* SECTION FONCTIONNEMENT
+- couleur <i>
+- couleur bouton
+- survol
+*/
+.fct {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.fct h2 {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  text-indent: 20px;
+}
+
+.btn-fct {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 325px;
+  height: 75px;
+  border-radius: 25px;
+  margin-bottom: 5%;
+}
+
+.btn-fct p {
+  font-weight: 700;
+}
+
+.btn-fct .nbr {
+  width: 25px;
+  height: 25px;
+  border-radius: 25px;
+  color: #fff;
+  background-color: #9356DC;
+  text-align: center;
+  padding-top: 3px;
+  margin-left: -18px;
+  margin-right: 10px;
+}
+
+.btn-fct i {
+  font-size: 22px;
+  width: 40px;
+  margin-right: 15px;
+}
+
+.btn-fct .step {
+  font-size: 105%;
+}
+
+/* SECTION RESTAURANT 
+- survol
+*/
+.restaurant {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f6f6f6;
+  padding-top: 8%;
+  padding-bottom: 10%;
+}
+
+.restaurant h2 {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  text-indent: 20px;
+}
+
+.restaurant__card {
+  border-radius: 20px;
+  background-color: #fff;
+  width: 90%;
+  height: 300px;
+  margin-bottom: 5%;
+  position: relative;
+  -webkit-box-shadow: 3px 3px 8px #909090;
+          box-shadow: 3px 3px 8px #909090;
+}
+
+.restaurant__card:hover > .fas {
+  opacity: 1;
+}
+
+.restaurant__card:hover > .far {
+  opacity: 0;
+}
+
+.restaurant__card img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  width: 100%;
+  height: 75%;
+}
+
+.restaurant__card h3, .restaurant__card p {
+  text-indent: 15px;
+}
+
+.restaurant__card h3 {
+  margin-top: 2%;
+}
+
+.restaurant__card p {
+  margin-top: -4%;
+  font-weight: 400;
+}
+
+.restaurant__card .new {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  text-align: center;
+  padding: 8px 15px 8px 15px;
+  border-radius: 3px;
+  font-weight: 700;
+  background-color: #99e2d0;
+  color: #278870;
+}
+
+.restaurant__card i {
+  font-size: 25px;
+}
+
+.restaurant__card .fas {
+  position: absolute;
+  right: 15px;
+  bottom: 25px;
+  background: linear-gradient(90turn, #FF79DA, #9356DC);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+  -webkit-transition: opacity, 1000ms;
+  transition: opacity, 1000ms;
+}
+
+.restaurant__card .far {
+  position: absolute;
+  right: 15px;
+  bottom: 25px;
+  opacity: 1;
+  -webkit-transition: 1000ms;
+  transition: 1000ms;
+}
+
+/* FOOTER 
+- espace entre <i> et texte
+*/
+.footer-accueil {
+  background-color: #353535;
+}
+
+.footer-accueil div {
+  padding: 5% 0% 3% 5%;
+}
+
+.footer-accueil span, .footer-accueil a {
+  color: #fff;
+}
+
+.footer-accueil span {
+  font-family: 'Shrikhand';
+  font-size: 110%;
+}
+
+.footer-accueil ul {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.footer-accueil ul li {
+  margin-bottom: 2%;
+}
+
+.footer-accueil ul li i {
+  margin-right: 10px;
 }
 /*# sourceMappingURL=main.css.map */
