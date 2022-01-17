@@ -1,15 +1,6 @@
+@import "./Utils/_variables.scss";
+@import "./Utils/_mixins.scss";
 
-
-$primary-color: #9356DC;
-$secondary-color: #FF79DA;
-$tertiary-color: #99e2d0;
-$bg-color: #f6f6f6;
-$bg-footer-color: #353535;
-$txt-white: #fff;
-
-@mixin shadow-btn($clr: darken($bg-color, 40%)){
-    box-shadow: 3px 3px 8px $clr;
-}
 
 /* REGLES GLOBAL*/
 
@@ -31,6 +22,12 @@ h2, h3
 {
     font-weight: 900;
 }
+h4
+{
+    font-size: 900;
+    font-weight: 300;
+    text-transform: uppercase;
+}
 p
 {
     font-weight: 300;
@@ -40,11 +37,7 @@ a
     text-decoration: none;
     color: black;
 }
-header
-{
-    text-align: center;
-    padding: 3% 0% 2% 0%;
-}
+
 li{
     list-style-type: none;
 }
@@ -56,6 +49,21 @@ li{
     border: none;
     @include shadow-btn;
 }
+
+/* HEADER */
+
+header
+{
+    padding: 3% 0% 2% 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & i{
+        justify-self: left;
+    }
+    
+}
+
 
     /* SECTION CALL TO ACTION
     - placer ligne ombré
@@ -176,12 +184,6 @@ li{
         margin-bottom: 5%;
         position: relative;
         @include shadow-btn;
-            &:hover > .fas {
-            opacity: 1;
-            }
-            &:hover > .far {
-            opacity: 0;
-            }
             & img{
             object-fit: cover;
             border-top-left-radius: 20px;
@@ -210,6 +212,14 @@ li{
                 background-color: $tertiary-color;
                 color: darken($color: $tertiary-color, $amount: 40%);
             }
+            & .coeur{
+                &:hover > .fas {
+                    opacity: 1;
+                    }
+                    &:hover > .far {
+                    opacity: 0;
+                    }
+            }
             & i{
                 font-size: 25px;
             }
@@ -234,6 +244,43 @@ li{
     }
 }
 
+/* PAGE RESTAURANT
+
+photo intro */
+
+.page-prev{
+    width: 100%;
+    & img{
+        object-fit: cover;
+        width: 100%;
+    }
+}
+
+.menu-page{
+    width: 100%;
+    background-color: $bg-color;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    margin-top: -10%;
+    position: relative;
+    padding: 4% 3% 5% 3%;
+    & .menu-title{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        & i{
+            font-size: 30px;
+        }
+    }
+    & .underline {
+        width: 50px;
+        height: 2px;
+        background-color: $tertiary-color;
+        margin-top: -3%;
+    }
+}
 /* FOOTER 
 - espace entre <i> et texte
 */
@@ -257,6 +304,10 @@ li{
             margin-bottom: 2%;
             & i{
                 margin-right: 10px;
+            }
+            & .fa-hands-helping{
+                font-size: 14px;
+                margin-right: 5px;
             }
         }
     }

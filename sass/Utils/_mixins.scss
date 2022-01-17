@@ -1,0 +1,5 @@
+/* MIXINS */
+
+@mixin shadow-btn($clr: darken($bg-color, 40%)){
+    box-shadow: 3px 3px 8px $clr;
+}
