@@ -1,5 +1,6 @@
 @import "./Utils/_variables.scss";
 @import "./Utils/_mixins.scss";
+@import "./Base/_typo.scss";
 
 
 /* REGLES GLOBAL*/
@@ -14,24 +15,7 @@ body
     width: 100%;
     font-family: 'Roboto', sans-serif;
 }
-h1
-{
-    font-family: 'Shrikhand';
-}
-h2, h3
-{
-    font-weight: 900;
-}
-h4
-{
-    font-size: 900;
-    font-weight: 300;
-    text-transform: uppercase;
-}
-p
-{
-    font-weight: 300;
-}
+
 a
 {
     text-decoration: none;
@@ -50,16 +34,21 @@ li{
     @include shadow-btn;
 }
 
+
+
+
 /* HEADER */
 
 header
 {
+    position: relative;
     padding: 3% 0% 2% 0%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    & i{
-        justify-self: left;
+    text-align: center;
+    & .back-link{
+        position: absolute;
+        left: 15px;
+        top: 20px;
+        font-size: 20px;
     }
     
 }
@@ -261,7 +250,7 @@ photo intro */
     background-color: $bg-color;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
-    margin-top: -10%;
+    margin-top: -15%;
     position: relative;
     padding: 4% 3% 5% 3%;
     & .menu-title{
@@ -278,9 +267,121 @@ photo intro */
         width: 50px;
         height: 2px;
         background-color: $tertiary-color;
-        margin-top: -3%;
+        margin-bottom: 5%;
+    }
+    & .coeur{
+                &:hover > .fas-menu {
+                    opacity: 1;
+                    }
+                    &:hover > .far-menu {
+                    opacity: 0;
+                    }
+            }
+    & .fas-menu{
+        position: absolute;
+        right: 15px;
+        top: 40px;
+        background: linear-gradient(90turn, $secondary-color, $primary-color);
+        background-clip: border-box;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        opacity: 0;
+        transition: opacity, 1000ms;
+    }
+    & .far-menu{
+        position: absolute;
+        right: 15px;
+        top: 40px;
+        opacity: 1;
+        transition: 1000ms;}
+}
+.btn-menu
+{
+    position: relative;
+    width: 100%;
+    height: 80px;
+    margin: 3% 0% 0% 0%;
+    padding: 0% 15px 0% 10px;
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @include shadow-btn;
+    transform: translateY(0);
+    animation: apparition-plat 2000ms;
+    &:hover > .anim-coche {
+        transform: translateX(0);
+    }
+    &:hover > .anim-coche i {
+        transform: rotate(0turn)
+    }
+    &:hover > .price{
+        transform: translateX(-200%);
+    }
+    &:hover > p{
+        width: calc(100% - 70px);
+    }
+    & p{
+        line-height: 1.5;
+        padding-right: 35px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 100%;
+        display: block;
+        transition: width 400ms;
+    }
+    & .price{
+        position: absolute;
+        right: 5%;
+        bottom: 14px;
+        font-weight: 900;
+        font-size: 110%;
+        transform: translateX(0);
+        transition: transform 400ms;
     }
 }
+
+.anim-coche
+{
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: $tertiary-color;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 70px;
+    height: 80px;
+    transform: translateX(105%);
+    transition: transform 400ms;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    & i {
+        color: white;
+        font-size: 30px;
+        transform: rotate(-1turn);
+        transition: transform 400ms;
+    }
+
+}
+@keyframes apparition-plat {
+    from {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.btn-order
+{
+    margin: 0 auto;
+    width: 200px;
+    padding-top: 5%;
+}
+
 /* FOOTER 
 - espace entre <i> et texte
 */
@@ -295,7 +396,7 @@ photo intro */
     }
     & span{
         font-family: 'Shrikhand';
-        font-size: 110%;
+        font-size: 115%;
     }
     & ul{
         margin-left: 0;
