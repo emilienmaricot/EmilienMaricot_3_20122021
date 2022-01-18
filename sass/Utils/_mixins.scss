@@ -3,3 +3,12 @@
 @mixin shadow-btn($clr: darken($bg-color, 30%)){
     box-shadow: 3px 3px 8px $clr;
 }
+
+@mixin shadow-btn-hover($clr: darken($bg-color, 40%)){
+    box-shadow: 5px 5px 8px $clr;
+    transition: 1000ms;
+}
+
+@mixin bg-btn-hover {
+    background: linear-gradient(to top left, $primary-color, $secondary-color);
+}

@@ -26,5 +26,8 @@ li{
     text-decoration: none;
     border: none;
     @include shadow-btn;
+    &:hover{
+        @include shadow-btn-hover;
+    }
 }
 

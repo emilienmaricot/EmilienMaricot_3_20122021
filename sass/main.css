@@ -58,6 +58,13 @@ li {
           box-shadow: 3px 3px 8px #aaaaaa;
 }
 
+.btn:hover {
+  -webkit-box-shadow: 5px 5px 8px #909090;
+          box-shadow: 5px 5px 8px #909090;
+  -webkit-transition: 1000ms;
+  transition: 1000ms;
+}
+
 header {
   position: relative;
   padding: 3% 0% 2% 0%;
@@ -71,37 +78,37 @@ header .back-link {
   font-size: 20px;
 }
 
-.footer-accueil {
+.footer {
   background-color: #353535;
 }
 
-.footer-accueil div {
+.footer div {
   padding: 5% 0% 3% 5%;
 }
 
-.footer-accueil span, .footer-accueil a {
+.footer span, .footer a {
   color: #fff;
 }
 
-.footer-accueil span {
+.footer span {
   font-family: 'Shrikhand';
   font-size: 115%;
 }
 
-.footer-accueil ul {
+.footer ul {
   margin-left: 0;
   padding-left: 0;
 }
 
-.footer-accueil ul li {
+.footer ul li {
   margin-bottom: 2%;
 }
 
-.footer-accueil ul li i {
+.footer ul li i {
   margin-right: 10px;
 }
 
-.footer-accueil ul li .fa-hands-helping {
+.footer ul li .fa-hands-helping {
   font-size: 14px;
   margin-right: 5px;
 }
