@@ -1,0 +1,42 @@
+header
+{
+    position: relative;
+    padding: 3% 0% 2% 0%;
+    text-align: center;
+    & .back-link{
+        position: absolute;
+        left: 15px;
+        top: 20px;
+        font-size: 20px;
+    }
+    
+}
+
+
+.footer-accueil{
+    background-color: $bg-footer-color;
+    & div{
+        padding: 5% 0% 3% 5%;
+    }
+    & span, a{
+        color: $txt-white;
+    }
+    & span{
+        font-family: 'Shrikhand';
+        font-size: 115%;
+    }
+    & ul{
+        margin-left: 0;
+        padding-left: 0;
+        & li{
+            margin-bottom: 2%;
+            & i{
+                margin-right: 10px;
+            }
+            & .fa-hands-helping{
+                font-size: 14px;
+                margin-right: 5px;
+            }
+        }
+    }
+}

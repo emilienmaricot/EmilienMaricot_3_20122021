@@ -1,0 +1,30 @@
+*
+{
+box-sizing: border-box;
+}
+body
+{
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+a
+{
+    text-decoration: none;
+    color: black;
+}
+
+li{
+    list-style-type: none;
+}
+
+/* BOUTON*/
+.btn
+{
+    font-weight: 700;
+    font-family: 'Roboto';
+    text-decoration: none;
+    border: none;
+    @include shadow-btn;
+}
+

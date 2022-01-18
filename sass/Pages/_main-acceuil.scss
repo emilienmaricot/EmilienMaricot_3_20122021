@@ -1,0 +1,178 @@
+/* SECTION CALL TO ACTION
+    - placer ligne ombré
+    - retravailler mixin shadow-btn
+    - survol
+    */
+
+    .btn-cta
+    {
+        width: 200px;
+        height: 45px;
+        margin-top: 3%;
+        border-radius: 50px;
+        color: $txt-white;
+        background: linear-gradient(to top left, $primary-color, $secondary-color);
+    }
+    .cta{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $bg-color;
+        text-align: center;
+        padding: 0% 0% 15% 0%;
+        & h2{
+            width: 75%;
+            margin-bottom: -2%;
+        }
+        & p{
+            width: 90%;
+            font-size: 110%;
+        }
+        &__local{
+            width: 100%;
+            text-align: center;
+            background-color: darken($color: $bg-color, $amount: 6%);
+            font-size: 120%;
+            font-weight: bold;
+            margin-bottom: 5%;
+            & i{
+                margin-right: 4%;
+                margin-top: -1%;
+            }
+        }
+    }
+
+/* SECTION FONCTIONNEMENT
+- couleur <i>
+- couleur bouton
+- survol
+*/
+
+.fct{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    & h2{
+        align-self: flex-start;
+        text-indent: 20px;
+    }
+}
+
+.btn-fct{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 325px;
+    height: 75px;
+    border-radius: 25px;
+    margin-bottom: 5%;
+    & p{
+        font-weight: 700;
+    }
+    & .nbr{
+        width: 25px;
+        height: 25px;
+        border-radius: 25px;
+        color: $txt-white;
+        background-color: $primary-color;
+        text-align: center;
+        padding-top: 3px;
+        margin-left: -18px;
+        margin-right: 10px;
+    }
+    & i{
+        font-size: 22px;
+        width: 40px;
+        margin-right: 15px;
+    }
+    & .step{
+        font-size: 105%;
+    }
+}
+
+/* SECTION RESTAURANT 
+- survol
+*/
+
+.restaurant{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+background-color: $bg-color;
+padding-top: 8%;
+padding-bottom: 10%;
+& h2{
+    align-self: flex-start;
+    text-indent: 20px;
+}
+&__card{
+    border-radius: 20px;
+    background-color: $txt-white;
+    width: 90%;
+    height: 300px;
+    margin-bottom: 5%;
+    position: relative;
+    @include shadow-btn;
+        & img{
+        object-fit: cover;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        width: 100%;
+        height: 75%;
+        }
+        & h3, p{
+            text-indent: 15px;
+        }
+        & h3{
+            margin-top: 2%;
+        }
+        & p{
+            margin-top: -4%;
+            font-weight: 400;
+        }
+        & .new{
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            text-align: center;
+            padding: 8px 15px 8px 15px;
+            border-radius: 3px;
+            font-weight: 700;
+            background-color: $tertiary-color;
+            color: darken($color: $tertiary-color, $amount: 40%);
+        }
+        & .coeur{
+            &:hover > .fas {
+                opacity: 1;
+                }
+                &:hover > .far {
+                opacity: 0;
+                }
+        }
+        & i{
+            font-size: 25px;
+        }
+        & .fas{
+            position: absolute;
+            right: 15px;
+            bottom: 25px;
+            background: linear-gradient(90turn, $secondary-color, $primary-color);
+            background-clip: border-box;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            opacity: 0;
+            transition: opacity, 1000ms;
+        }
+        & .far{
+            position: absolute;
+            right: 15px;
+            bottom: 25px;
+            opacity: 1;
+            transition: 1000ms;}
+    
+}
+}
