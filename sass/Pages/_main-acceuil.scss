@@ -20,7 +20,7 @@
         //padding: 0% 0% 15% 0%;
         & h2{
             width: 75%;
-            margin-bottom: -1%;
+            //margin-bottom: -1%;
         }
         & p{
             width: 90%;
@@ -34,7 +34,7 @@
             font-weight: bold;
             margin-bottom: 5%;
             & i{
-                margin-right: 4%;
+                margin-right: 2%;
                 margin-top: -1%;
             }
             & p{
@@ -51,14 +51,17 @@
 */
 
 .fct{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     @include desktop-only-row;
     & h2{
-        align-self: flex-start;
-        text-indent: 20px;
+        width: 90%;
+        //margin-left: -155px;
         @include desktop-only-start;
     }
 }
@@ -68,8 +71,8 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    width: 310px;
-    min-width: 310px;
+    width: 100%;
+    max-width: 300px;
     height: 70px;
     border-radius: 25px;
     margin-bottom: 5%;
@@ -104,7 +107,7 @@
     }
     & .step{
         font-size: 105%;
-        text-indent: 25px;
+        margin-left: 25px;
     }
 }
 

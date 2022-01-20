@@ -34,9 +34,7 @@ $breakpoints: (
 
 @mixin desktop-only-start {
     @media all and (min-width: map-get($breakpoints, desktop)) {
-        align-self: flex-start;
-        width: 100%;
-        margin-left: 3%;
+        width: 93%;
     }
 }
 
