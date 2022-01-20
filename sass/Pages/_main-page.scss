@@ -5,6 +5,7 @@
     & img{
         object-fit: cover;
         width: 100%;
+        @include desktop-acceuil-img;
     }
 }
 
@@ -15,7 +16,7 @@
     border-top-right-radius: 50px;
     margin-top: -15%;
     position: relative;
-    padding: 4% 3% 5% 3%;
+    padding: 15px 3% 5% 3%;
     & .menu-title{
         display: flex;
         flex-direction: row;
@@ -33,17 +34,17 @@
         margin-bottom: 5%;
     }
     & .coeur{
+        display: flex;
+        justify-content: center;
+        align-items: center;
                 &:hover > .fas-menu {
                     opacity: 1;
                     }
-                    &:hover > .far-menu {
+                &:hover > .far-menu {
                     opacity: 0;
                     }
             }
     & .fas-menu{
-        position: absolute;
-        right: 15px;
-        top: 40px;
         background: linear-gradient(90turn, $secondary-color, $primary-color);
         background-clip: border-box;
         -webkit-background-clip: text;
@@ -52,9 +53,6 @@
         transition: opacity, 1000ms;
     }
     & .far-menu{
-        position: absolute;
-        right: 15px;
-        top: 40px;
         opacity: 1;
         transition: 1000ms;}
 }
@@ -85,7 +83,7 @@
         width: calc(100% - 70px);
     }
     & p{
-        line-height: 1.5;
+        //line-height: 1;
         padding-right: 35px;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -138,9 +136,9 @@
         transform: translateY(0);
     }
 }
-.btn-order
+.order
 {
-    margin: 0 auto;
-    width: 200px;
+    display: flex;
+    justify-content: center;
     padding-top: 5%;
 }

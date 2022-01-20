@@ -1,9 +1,11 @@
 @charset "UTF-8";
 /* VARIABLES */
 /* MIXINS */
+/*MIXIN MEDIA QUERIES*/
 /* FONT */
 h1 {
   font-family: 'Shrikhand';
+  font-size: 1.5em;
 }
 
 h2, h3 {
@@ -11,9 +13,9 @@ h2, h3 {
 }
 
 h4 {
-  font-size: 900;
   font-weight: 300;
   text-transform: uppercase;
+  margin-top: 4%;
 }
 
 p {
@@ -27,6 +29,7 @@ p {
 .bck {
   font-weight: 900;
   font-size: 115%;
+  margin-bottom: -10px;
 }
 
 * {
@@ -50,18 +53,29 @@ li {
 
 /* BOUTON*/
 .btn {
+  cursor: pointer;
+  width: 200px;
+  height: 45px;
   font-weight: 700;
   font-family: 'Roboto';
   text-decoration: none;
   border: none;
+  border-radius: 50px;
+  color: #fff;
+  background: -webkit-gradient(linear, right bottom, left top, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(to top left, #9356DC, #FF79DA);
   -webkit-box-shadow: 3px 3px 8px #aaaaaa;
           box-shadow: 3px 3px 8px #aaaaaa;
 }
 
 .btn:hover {
+  -webkit-transition: 1000ms;
+  transition: 1000ms;
   -webkit-box-shadow: 5px 5px 8px #909090;
           box-shadow: 5px 5px 8px #909090;
-  -webkit-transition: 1000ms;
+  transition: 1000ms;
+  background: -webkit-gradient(linear, right bottom, left top, from(#a16be0), to(#ff93e1));
+  background: linear-gradient(to top left, #a16be0, #ff93e1);
   transition: 1000ms;
 }
 
@@ -69,6 +83,8 @@ header {
   position: relative;
   padding: 3% 0% 2% 0%;
   text-align: center;
+  -webkit-box-shadow: 0px 3px 3px #aaaaaa;
+          box-shadow: 0px 3px 3px #aaaaaa;
 }
 
 header .back-link {
@@ -119,16 +135,12 @@ header .back-link {
     - survol
     */
 .btn-cta {
-  width: 200px;
-  height: 45px;
   margin-top: 3%;
-  border-radius: 50px;
-  color: #fff;
-  background: -webkit-gradient(linear, right bottom, left top, from(#9356DC), to(#FF79DA));
-  background: linear-gradient(to top left, #9356DC, #FF79DA);
+  padding-top: 12px;
 }
 
 .cta {
+  height: 350px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -136,20 +148,19 @@ header .back-link {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   background-color: #f6f6f6;
   text-align: center;
-  padding: 0% 0% 15% 0%;
 }
 
 .cta h2 {
   width: 75%;
-  margin-bottom: -2%;
+  margin-bottom: -1%;
 }
 
 .cta p {
@@ -169,6 +180,11 @@ header .back-link {
 .cta__local i {
   margin-right: 4%;
   margin-top: -1%;
+}
+
+.cta__local p {
+  font-weight: 700;
+  width: 100%;
 }
 
 /* SECTION FONCTIONNEMENT
@@ -192,13 +208,36 @@ header .back-link {
           align-items: center;
 }
 
+@media all and (min-width: 1024px) {
+  .fct {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+}
+
 .fct h2 {
   -ms-flex-item-align: start;
       align-self: flex-start;
   text-indent: 20px;
 }
 
-.btn-fct {
+@media all and (min-width: 1024px) {
+  .fct h2 {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    width: 100%;
+    margin-left: 3%;
+  }
+}
+
+.etape-fct {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -212,17 +251,31 @@ header .back-link {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 325px;
-  height: 75px;
+  width: 310px;
+  min-width: 310px;
+  height: 70px;
   border-radius: 25px;
   margin-bottom: 5%;
+  background: #f6f6f6;
+  -webkit-transition: 1000ms;
+  transition: 1000ms;
+  -webkit-box-shadow: 3px 3px 8px #aaaaaa;
+          box-shadow: 3px 3px 8px #aaaaaa;
 }
 
-.btn-fct p {
+.etape-fct:hover {
+  background: #f2eafb;
+}
+
+.etape-fct:hover > i {
+  color: #9356DC;
+}
+
+.etape-fct p {
   font-weight: 700;
 }
 
-.btn-fct .nbr {
+.etape-fct .nbr {
   width: 25px;
   height: 25px;
   border-radius: 25px;
@@ -230,18 +283,20 @@ header .back-link {
   background-color: #9356DC;
   text-align: center;
   padding-top: 3px;
-  margin-left: -18px;
-  margin-right: 10px;
+  margin-left: -13px;
 }
 
-.btn-fct i {
+.etape-fct i {
+  text-align: center;
   font-size: 22px;
   width: 40px;
-  margin-right: 15px;
+  text-indent: 20px;
+  color: #909090;
 }
 
-.btn-fct .step {
+.etape-fct .step {
   font-size: 105%;
+  text-indent: 25px;
 }
 
 /* SECTION RESTAURANT 
@@ -262,25 +317,61 @@ header .back-link {
       -ms-flex-align: center;
           align-items: center;
   background-color: #f6f6f6;
-  padding-top: 8%;
-  padding-bottom: 10%;
+  padding: 8% 5% 10% 5%;
+  width: 100%;
+}
+
+@media all and (min-width: 1024px) {
+  .restaurant {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
 }
 
 .restaurant h2 {
   -ms-flex-item-align: start;
       align-self: flex-start;
-  text-indent: 20px;
+}
+
+@media all and (min-width: 1024px) {
+  .restaurant h2 {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    width: 100%;
+    margin-left: 3%;
+  }
 }
 
 .restaurant__card {
   border-radius: 20px;
   background-color: #fff;
-  width: 90%;
+  width: 100%;
   height: 300px;
   margin-bottom: 5%;
+  line-height: 60%;
   position: relative;
   -webkit-box-shadow: 3px 3px 8px #aaaaaa;
           box-shadow: 3px 3px 8px #aaaaaa;
+}
+
+@media all and (min-width: 1024px) {
+  .restaurant__card {
+    width: 45%;
+  }
+}
+
+.restaurant__card:hover {
+  -webkit-box-shadow: 5px 5px 8px #909090;
+          box-shadow: 5px 5px 8px #909090;
+  -webkit-transition: 1000ms;
+  transition: 1000ms;
 }
 
 .restaurant__card img {
@@ -296,12 +387,7 @@ header .back-link {
   text-indent: 15px;
 }
 
-.restaurant__card h3 {
-  margin-top: 2%;
-}
-
 .restaurant__card p {
-  margin-top: -4%;
   font-weight: 400;
 }
 
@@ -362,6 +448,14 @@ header .back-link {
   width: 100%;
 }
 
+@media all and (min-width: 1024px) {
+  .page-prev img {
+    height: 400px;
+    -o-object-position: 0px -350px;
+       object-position: 0px -350px;
+  }
+}
+
 .menu-page {
   width: 100%;
   background-color: #f6f6f6;
@@ -369,7 +463,7 @@ header .back-link {
   border-top-right-radius: 50px;
   margin-top: -15%;
   position: relative;
-  padding: 4% 3% 5% 3%;
+  padding: 15px 3% 5% 3%;
 }
 
 .menu-page .menu-title {
@@ -401,6 +495,18 @@ header .back-link {
   margin-bottom: 5%;
 }
 
+.menu-page .coeur {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .menu-page .coeur:hover > .fas-menu {
   opacity: 1;
 }
@@ -410,9 +516,6 @@ header .back-link {
 }
 
 .menu-page .fas-menu {
-  position: absolute;
-  right: 15px;
-  top: 40px;
   background: linear-gradient(90turn, #FF79DA, #9356DC);
   background-clip: border-box;
   -webkit-background-clip: text;
@@ -423,9 +526,6 @@ header .back-link {
 }
 
 .menu-page .far-menu {
-  position: absolute;
-  right: 15px;
-  top: 40px;
   opacity: 1;
   -webkit-transition: 1000ms;
   transition: 1000ms;
@@ -469,7 +569,6 @@ header .back-link {
 }
 
 .btn-menu p {
-  line-height: 1.5;
   padding-right: 35px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -556,9 +655,13 @@ header .back-link {
   }
 }
 
-.btn-order {
-  margin: 0 auto;
-  width: 200px;
+.order {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding-top: 5%;
 }
 
@@ -568,40 +671,48 @@ header .back-link {
   position: absolute;
   width: 100%;
   height: 100%;
-  -webkit-animation: loader-time 2s forwards;
-          animation: loader-time 2s forwards;
-}
-
-.loader::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
+  -webkit-animation: loader-time 2000ms forwards;
+          animation: loader-time 2000ms forwards;
   z-index: 10001;
   overflow: hidden;
   background: #353535;
-  opacity: 0.6;
+  opacity: 1;
 }
 
-.loader::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+.spin {
   z-index: 10002;
-  content: "";
   position: absolute;
   top: 50%;
   left: 50%;
   margin: -25px 0 0 -25px;
-  border: 3px solid #f3f3f3;
-  border-top: 3px solid #FF79DA;
+  border: 6px solid #99e2d0;
+  border-top: 6px solid #FF79DA;
+  border-bottom: 6px solid #FF79DA;
   border-radius: 50%;
   width: 50px;
   height: 50px;
-  -webkit-animation: custom-loading 1s linear infinite;
-          animation: custom-loading 1s linear infinite;
+  opacity: 1;
+  -webkit-animation: spinning 1s linear infinite;
+          animation: spinning 1s linear infinite;
 }
 
-@-webkit-keyframes custom-loading {
+.oh-load {
+  z-index: 10003;
+  width: 100%;
+  font-family: 'Shrikhand';
+  font-size: 300%;
+  text-align: center;
+  margin-top: 20%;
+  background: -webkit-gradient(linear, right bottom, left top, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(to top left, #9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-animation: oh-pacity 2000ms ease-in-out forwards;
+          animation: oh-pacity 2000ms ease-in-out forwards;
+}
+
+@-webkit-keyframes spinning {
   0% {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
@@ -612,7 +723,7 @@ header .back-link {
   }
 }
 
-@keyframes custom-loading {
+@keyframes spinning {
   0% {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
@@ -624,10 +735,13 @@ header .back-link {
 }
 
 @-webkit-keyframes loader-time {
-  from {
+  0% {
     opacity: 1;
   }
-  to {
+  80% {
+    opacity: 1;
+  }
+  100% {
     opacity: 0;
     display: none;
     visibility: hidden;
@@ -635,13 +749,54 @@ header .back-link {
 }
 
 @keyframes loader-time {
-  from {
+  0% {
     opacity: 1;
   }
-  to {
+  80% {
+    opacity: 1;
+  }
+  100% {
     opacity: 0;
     display: none;
     visibility: hidden;
   }
 }
+
+@-webkit-keyframes oh-pacity {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes oh-pacity {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/*Utils :
+    Variables.
+    Fonctions.
+    Mixins.
+    Placeholders.
+Vendors
+Base.
+Composants.
+Layout.
+Pages.
+Thèmes.*/
 /*# sourceMappingURL=main.css.map */

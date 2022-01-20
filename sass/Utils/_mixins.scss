@@ -9,6 +9,46 @@
     transition: 1000ms;
 }
 
+@mixin bg-color-hover {
+    background: linear-gradient(to top left, lighten($primary-color, 5%), lighten($secondary-color, 5%));
+    transition: 1000ms;
+}
+
 @mixin bg-btn-hover {
     background: linear-gradient(to top left, $primary-color, $secondary-color);
+}
+
+/*MIXIN MEDIA QUERIES*/
+
+$breakpoints: (
+    desktop: 1024px
+);
+
+@mixin desktop-only-row {
+    @media all and (min-width: map-get($breakpoints, desktop)) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+}
+
+@mixin desktop-only-start {
+    @media all and (min-width: map-get($breakpoints, desktop)) {
+        align-self: flex-start;
+        width: 100%;
+        margin-left: 3%;
+    }
+}
+
+@mixin desktop-main-card {
+    @media all and (min-width: map-get($breakpoints, desktop)) {
+        width: 45%;
+    }
+}
+
+@mixin desktop-acceuil-img {
+    @media all and (min-width: map-get($breakpoints, desktop)) {
+        height: 400px;
+        object-position: 0px -350px;
+    }
 }

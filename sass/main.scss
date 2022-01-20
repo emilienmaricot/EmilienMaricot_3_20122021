@@ -1,8 +1,21 @@
-@import "./Utils/_variables.scss";
-@import "./Utils/_mixins.scss";
-@import "./Base/_typo.scss";
+@import "./Utils/variables";
+@import "./Utils/mixins";
+@import "./Base/typo";
 @import "./Base/base";
 @import "./Layout/header-footer";
 @import "./Pages/main-acceuil";
 @import "./Pages/main-page";
 @import "./Pages/loader";
+
+
+/*Utils :
+    Variables.
+    Fonctions.
+    Mixins.
+    Placeholders.
+Vendors
+Base.
+Composants.
+Layout.
+Pages.
+Thèmes.*/

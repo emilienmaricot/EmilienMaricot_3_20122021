@@ -21,13 +21,21 @@ li{
 /* BOUTON*/
 .btn
 {
+    cursor: pointer;
+    width: 200px;
+    height: 45px;
     font-weight: 700;
     font-family: 'Roboto';
     text-decoration: none;
     border: none;
+    border-radius: 50px;
+    color: $txt-white;
+    background: linear-gradient(to top left, $primary-color, $secondary-color);
     @include shadow-btn;
     &:hover{
+        transition: 1000ms;
         @include shadow-btn-hover;
+        @include bg-color-hover;
     }
 }
 

@@ -6,24 +6,21 @@
 
     .btn-cta
     {
-        width: 200px;
-        height: 45px;
         margin-top: 3%;
-        border-radius: 50px;
-        color: $txt-white;
-        background: linear-gradient(to top left, $primary-color, $secondary-color);
+        padding-top: 12px;
     }
     .cta{
+        height: 350px;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         background-color: $bg-color;
         text-align: center;
-        padding: 0% 0% 15% 0%;
+        //padding: 0% 0% 15% 0%;
         & h2{
             width: 75%;
-            margin-bottom: -2%;
+            margin-bottom: -1%;
         }
         & p{
             width: 90%;
@@ -40,6 +37,10 @@
                 margin-right: 4%;
                 margin-top: -1%;
             }
+            & p{
+                font-weight: 700;
+                width: 100%;
+            }
         }
     }
 
@@ -54,21 +55,33 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    @include desktop-only-row;
     & h2{
         align-self: flex-start;
         text-indent: 20px;
+        @include desktop-only-start;
     }
 }
 
-.btn-fct{
+.etape-fct{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    width: 325px;
-    height: 75px;
+    width: 310px;
+    min-width: 310px;
+    height: 70px;
     border-radius: 25px;
     margin-bottom: 5%;
+    background: $bg-color;
+    transition: 1000ms;
+    @include shadow-btn;
+    &:hover{
+        background: lighten($color: $primary-color, $amount: 35%);
+    }
+    &:hover > i{
+        color: $primary-color;
+    }
     & p{
         font-weight: 700;
     }
@@ -80,16 +93,18 @@
         background-color: $primary-color;
         text-align: center;
         padding-top: 3px;
-        margin-left: -18px;
-        margin-right: 10px;
+        margin-left: -13px;
     }
     & i{
+        text-align: center;
         font-size: 22px;
         width: 40px;
-        margin-right: 15px;
+        text-indent: 20px;
+        color: darken($color: $bg-color, $amount: 40%);
     }
     & .step{
         font-size: 105%;
+        text-indent: 25px;
     }
 }
 
@@ -103,20 +118,25 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 background-color: $bg-color;
-padding-top: 8%;
-padding-bottom: 10%;
+padding: 8% 5% 10% 5%;
+width: 100%;
+@include desktop-only-row;
 & h2{
     align-self: flex-start;
-    text-indent: 20px;
+    @include desktop-only-start
 }
 &__card{
     border-radius: 20px;
     background-color: $txt-white;
-    width: 90%;
+    width: 100%;
     height: 300px;
     margin-bottom: 5%;
+    line-height: 60%;
     position: relative;
+    @include desktop-main-card;
     @include shadow-btn;
+        &:hover{
+        @include shadow-btn-hover;}
         & img{
         object-fit: cover;
         border-top-left-radius: 20px;
@@ -127,11 +147,8 @@ padding-bottom: 10%;
         & h3, p{
             text-indent: 15px;
         }
-        & h3{
-            margin-top: 2%;
-        }
         & p{
-            margin-top: -4%;
+            
             font-weight: 400;
         }
         & .new{
@@ -149,7 +166,7 @@ padding-bottom: 10%;
             &:hover > .fas {
                 opacity: 1;
                 }
-                &:hover > .far {
+            &:hover > .far {
                 opacity: 0;
                 }
         }
