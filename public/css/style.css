@@ -117,11 +117,7 @@ header .back-link {
   margin-right: 5px;
 }
 
-/* SECTION CALL TO ACTION
-    - placer ligne ombré
-    - retravailler mixin shadow-btn
-    - survol
-    */
+/* SECTION CALL TO ACTION */
 .btn-cta {
   margin-top: 3%;
   padding-top: 12px;
@@ -160,11 +156,7 @@ header .back-link {
   width: 100%;
 }
 
-/* SECTION FONCTIONNEMENT
-- couleur <i>
-- couleur bouton
-- survol
-*/
+/* SECTION FONCTIONNEMENT*/
 .fct {
   width: 90%;
   margin-left: auto;
@@ -235,9 +227,7 @@ header .back-link {
   margin-left: 25px;
 }
 
-/* SECTION RESTAURANT 
-- survol
-*/
+/* SECTION RESTAURANT */
 .restaurant {
   display: flex;
   flex-direction: column;
@@ -371,7 +361,7 @@ header .back-link {
   width: 50px;
   height: 2px;
   background-color: #99e2d0;
-  margin-bottom: 5%;
+  margin-bottom: 3%;
 }
 .menu-page .coeur {
   display: flex;
