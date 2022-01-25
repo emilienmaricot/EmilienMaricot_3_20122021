@@ -19,6 +19,7 @@ h4 {
   font-weight: 300;
   text-transform: uppercase;
   margin-top: 4%;
+  margin-bottom: 10px;
 }
 
 p {
@@ -59,6 +60,7 @@ li {
   cursor: pointer;
   width: 200px;
   height: 45px;
+  min-height: 45px;
   font-weight: 700;
   font-family: 'Roboto';
   text-decoration: none;
@@ -135,7 +137,8 @@ header .back-link {
 
 /* SECTION CALL TO ACTION */
 .btn-cta {
-  margin-top: 3%;
+  margin-top: 10px;
+  margin-bottom: 10px;
   padding-top: 12px;
 }
 
@@ -480,7 +483,7 @@ header .back-link {
   width: 50px;
   height: 2px;
   background-color: #99e2d0;
-  margin-bottom: 3%;
+  margin-bottom: 10px;
 }
 
 .menu-page .coeur {
@@ -523,7 +526,7 @@ header .back-link {
   position: relative;
   width: 100%;
   height: 80px;
-  margin: 3% 0% 0% 0%;
+  margin: 10px 0px 0px 0px;
   padding: 0% 15px 0% 10px;
   background-color: white;
   border-radius: 20px;
@@ -690,7 +693,7 @@ header .back-link {
   font-family: 'Shrikhand';
   font-size: 300%;
   text-align: center;
-  margin-top: 20%;
+  margin-top: 50px;
   background: -webkit-gradient(linear, right bottom, left top, from(#9356DC), to(#FF79DA));
   background: linear-gradient(to top left, #9356DC, #FF79DA);
   background-clip: text;
