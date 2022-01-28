@@ -7,14 +7,14 @@
         padding-top: 12px;
     }
     .cta{
-        height: 350px;
+        height: auto;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
         background-color: $bg-color;
         text-align: center;
-        //padding: 0px 0px 15px 0px;
+        padding: 0px 0px 15px 0px;
         & h2{
             width: 75%;
         }

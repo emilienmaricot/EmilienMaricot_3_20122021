@@ -3,12 +3,9 @@
 /* MIXINS */
 /*MIXIN MEDIA QUERIES*/
 /* FONT */
-h1 {
-  font-family: 'Shrikhand';
-}
-
 .shrik {
   font-size: 165%;
+  font-family: 'Shrikhand';
 }
 
 h2, h3 {
@@ -143,7 +140,7 @@ header .back-link {
 }
 
 .cta {
-  height: 350px;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -159,6 +156,7 @@ header .back-link {
           align-items: center;
   background-color: #f6f6f6;
   text-align: center;
+  padding: 0px 0px 15px 0px;
 }
 
 .cta h2 {
