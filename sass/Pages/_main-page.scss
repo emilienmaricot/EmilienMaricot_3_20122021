@@ -69,7 +69,6 @@
     text-overflow: ellipsis;
     @include shadow-btn;
     transform: translateY(0);
-    animation: apparition-plat 2000ms;
     &:hover > .anim-coche {
         transform: translateX(0);
     }
@@ -125,16 +124,52 @@
     }
 
 }
-@keyframes apparition-plat {
-    from {
+
+// ANIMATION DES MENUS 
+
+@keyframes apparition-entree {
+    0% {
         opacity: 0;
         transform: translateY(50%);
     }
-    to {
+    100% {
         opacity: 1;
         transform: translateY(0);
     }
 }
+.anim-entree{
+animation: apparition-entree 2000ms;}
+
+@keyframes apparition-plat {
+    0% {
+        opacity: 0;
+        transform: translateY(50%);}
+    30% {
+        opacity: 0;
+        transform: translateY(50%);}
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.anim-plat{
+animation: apparition-plat 2500ms;}
+
+@keyframes apparition-dessert {
+    0% {
+        opacity: 0;
+        transform: translateY(50%);}
+    50% {
+        opacity: 0;
+        transform: translateY(50%);}
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.anim-dessert{
+animation: apparition-dessert 2800ms;}
+
 .order
 {
     display: flex;
